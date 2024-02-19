@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C4F657F42B7965E400D7A8FF /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = C4F657F32B7965E400D7A8FF /* RealityKitContent */; };
 		C4F657F62B7965E400D7A8FF /* VariableSizeWindowSceneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F657F52B7965E400D7A8FF /* VariableSizeWindowSceneApp.swift */; };
 		C4F657F82B7965E400D7A8FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F657F72B7965E400D7A8FF /* ContentView.swift */; };
 		C4F657FA2B7965E400D7A8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4F657F92B7965E400D7A8FF /* Assets.xcassets */; };
 		C4F657FD2B7965E400D7A8FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4F657FC2B7965E400D7A8FF /* Preview Assets.xcassets */; };
+		C4F658052B79718400D7A8FF /* WindowInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F658042B79718400D7A8FF /* WindowInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +22,7 @@
 		C4F657F92B7965E400D7A8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4F657FC2B7965E400D7A8FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C4F657FE2B7965E400D7A8FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F658042B79718400D7A8FF /* WindowInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,7 +30,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4F657F42B7965E400D7A8FF /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +61,7 @@
 				C4F657F92B7965E400D7A8FF /* Assets.xcassets */,
 				C4F657FE2B7965E400D7A8FF /* Info.plist */,
 				C4F657FB2B7965E400D7A8FF /* Preview Content */,
+				C4F658042B79718400D7A8FF /* WindowInfo.swift */,
 			);
 			path = VariableSizeWindowScene;
 			sourceTree = "<group>";
@@ -98,7 +99,6 @@
 			);
 			name = VariableSizeWindowScene;
 			packageProductDependencies = (
-				C4F657F32B7965E400D7A8FF /* RealityKitContent */,
 			);
 			productName = VariableSizeWindowScene;
 			productReference = C4F657EE2B7965E400D7A8FF /* VariableSizeWindowScene.app */;
@@ -128,6 +128,9 @@
 				Base,
 			);
 			mainGroup = C4F657E52B7965E400D7A8FF;
+			packageReferences = (
+				C4D0FC8D2B831C9E00C84DA5 /* XCRemoteSwiftPackageReference "WindowSceneReader" */,
+			);
 			productRefGroup = C4F657EF2B7965E400D7A8FF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F657F82B7965E400D7A8FF /* ContentView.swift in Sources */,
+				C4F658052B79718400D7A8FF /* WindowInfo.swift in Sources */,
 				C4F657F62B7965E400D7A8FF /* VariableSizeWindowSceneApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,12 +360,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCSwiftPackageProductDependency section */
-		C4F657F32B7965E400D7A8FF /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
+/* Begin XCRemoteSwiftPackageReference section */
+		C4D0FC8D2B831C9E00C84DA5 /* XCRemoteSwiftPackageReference "WindowSceneReader" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/divadretlaw/WindowSceneReader";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
 		};
-/* End XCSwiftPackageProductDependency section */
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = C4F657E62B7965E400D7A8FF /* Project object */;
 }

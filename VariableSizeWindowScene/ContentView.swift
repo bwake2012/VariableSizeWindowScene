@@ -14,17 +14,88 @@ import RealityKit
 import RealityKitContent
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
+    @EnvironmentObject var windowInfo: WindowInfo
 
-            Text("Hello, world!")
+    let passedSize: CGSize
+    var body: some View {
+        GeometryReader { geometry in
+            VStack(alignment: .center) {
+                Spacer()
+                HStack(alignment: .center) {
+                    Spacer()
+                    VStack {
+
+                        HStack(alignment: .center) {
+                            Text("PassedSize:")
+                            Text("\(Int(passedSize.width))")
+                            Text("\(Int(passedSize.height))")
+                        }
+                        .background(.blue)
+
+                        HStack(alignment: .center) {
+                            Text("Geometry:")
+                            Text("\(Int(geometry.size.width))")
+                            Text("\(Int(geometry.size.height))")
+                        }
+                        .background(.red)
+
+                        HStack(alignment: .center) {
+                            Text("WindowInfo:")
+                            Text("\(Int(windowInfo.contentSize.width))")
+                            Text("\(Int(windowInfo.contentSize.height))")
+                        }
+                        .background(.green)
+
+                        VStack(alignment: .center) {
+                            PortraitButton()
+                            SquareButton()
+                            LandscapeButton()
+                        }
+                    }
+                    .padding()
+
+                    Spacer()
+                }
+                Spacer()
+            }
         }
-        .padding()
+        .fixedSize(horizontal: false, vertical: false)
     }
 }
 
-#Preview(windowStyle: .automatic) {
-    ContentView()
+struct PortraitButton: View {
+    @EnvironmentObject var windowInfo: WindowInfo
+
+    var body: some View {
+        Button("Portrait", systemImage: "rectangle.portrait.fill") {
+            self.windowInfo.contentSize =
+            CGSize(width: shortSide, height: longSide)
+            windowInfo.resizeScene(newSize: self.windowInfo.contentSize)
+        }
+    }
 }
+
+struct LandscapeButton: View {
+    @EnvironmentObject var windowInfo: WindowInfo
+
+    var body: some View {
+        Button("Landscape", systemImage: "rectangle.fill") {
+            self.windowInfo.contentSize =
+            CGSize(width: longSide, height: shortSide)
+            windowInfo.resizeScene(newSize: self.windowInfo.contentSize)
+        }
+    }
+}
+
+struct SquareButton: View {
+    @EnvironmentObject var windowInfo: WindowInfo
+
+    var body: some View {
+        Button("Square", systemImage: "square.fill") {
+            self.windowInfo.contentSize =
+            CGSize(width: shortSide, height: shortSide)
+            windowInfo.resizeScene(newSize: self.windowInfo.contentSize)
+        }
+    }
+}
+
