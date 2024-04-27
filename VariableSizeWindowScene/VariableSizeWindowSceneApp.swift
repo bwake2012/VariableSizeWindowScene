@@ -29,7 +29,7 @@ struct VariableSizeWindowSceneApp: App {
                     minHeight: windowInfo.contentSize.height,
                     maxHeight: windowInfo.contentSize.height
                 )
-                .background(.clear)
+                .background(.cyan)
         }
         .windowResizability(.contentSize)
     }

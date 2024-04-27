@@ -16,7 +16,6 @@
 
 /* Begin PBXFileReference section */
 		C4F657EE2B7965E400D7A8FF /* VariableSizeWindowScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VariableSizeWindowScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4F657F22B7965E400D7A8FF /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		C4F657F52B7965E400D7A8FF /* VariableSizeWindowSceneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableSizeWindowSceneApp.swift; sourceTree = "<group>"; };
 		C4F657F72B7965E400D7A8FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4F657F92B7965E400D7A8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -69,7 +68,6 @@
 		C4F657F12B7965E400D7A8FF /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				C4F657F22B7965E400D7A8FF /* RealityKitContent */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
