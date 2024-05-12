@@ -83,6 +83,18 @@ struct ContentView: View {
             .padding()
             .glassBackgroundEffect()
         }
+        .ornament(
+            visibility: .visible,
+            attachmentAnchor: .scene(tertiaryAttachmentAnchor),
+            contentAlignment: tertiaryAlignment
+        ) {
+            ButtonStack(attachment: tertiaryAttachmentAnchor) {
+                Text(String(format: "%3.0f", passedSize.width))
+                Text(String(format: "%3.0f", passedSize.height))
+            }
+            .padding()
+            .glassBackgroundEffect()
+        }
     }
 
     var placement: ToolbarItemPlacement = {
@@ -127,6 +139,23 @@ struct ContentView: View {
         } else {
             return .center
         }
+    }
+
+    var tertiaryAttachmentAnchor: UnitPoint {
+        let anchor = attachmentAnchor
+        switch attachmentAnchor {
+        case .topLeading, .top, .topTrailing,
+            .bottomLeading, .bottom, .bottomTrailing:
+            return .leading
+        case .leading, .trailing:
+            return .bottom
+        default:
+            return .bottom
+        }
+    }
+
+    var tertiaryAlignment: Alignment {
+        alignment(anchor: tertiaryAttachmentAnchor)
     }
 }
 
