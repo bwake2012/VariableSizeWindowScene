@@ -2,4 +2,4 @@
 
 This is to demonstrate changing the scene dimensions from SwiftUI.
 
-[Screen Shot](VariableSizeWindowScene.png)
+![Screen Shot](VariableSizeWindowScene.png)
