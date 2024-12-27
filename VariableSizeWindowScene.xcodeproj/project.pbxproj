@@ -15,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C430CBE02D1F61D4000DC340 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4F657EE2B7965E400D7A8FF /* VariableSizeWindowScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VariableSizeWindowScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F657F52B7965E400D7A8FF /* VariableSizeWindowSceneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableSizeWindowSceneApp.swift; sourceTree = "<group>"; };
 		C4F657F72B7965E400D7A8FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		C4F657E52B7965E400D7A8FF = {
 			isa = PBXGroup;
 			children = (
+				C430CBE02D1F61D4000DC340 /* README.md */,
 				C4F657F02B7965E400D7A8FF /* VariableSizeWindowScene */,
 				C4F657F12B7965E400D7A8FF /* Packages */,
 				C4F657EF2B7965E400D7A8FF /* Products */,
